@@ -10,6 +10,7 @@ import pandas as pd
 from app import *
 
 from components.sidebar import sidebar
+from pages import home
 
 app.layout = dbc.Container(children=[
     dcc.Location(id='url'),
@@ -23,7 +24,7 @@ app.layout = dbc.Container(children=[
 )
 def render_page_content(pathname):
     if pathname == "/" or pathname == "/home":
-        pass
+        return home.layout
 
 if __name__ == '__main__':
     app.run(debug=True)

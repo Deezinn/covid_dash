@@ -17,9 +17,7 @@ SIDEBAR_STYLE = {
     "bottom": 0,
     "width": "8rem",
     "padding": "2rem 1rem",
-    "background-color": "brown",
-    "margin": "20px",
-    "border-radius": "20px"
+    "background-color": "#7f7f7f",
 }
 
 CONTENT_STYLE = {
