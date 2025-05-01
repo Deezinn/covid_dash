@@ -9,8 +9,11 @@ import plotly.graph_objects as go
 import pandas as pd
 from app import *
 
+from components.sidebar import sidebar
+
 app.layout = dbc.Container(children=[
     dcc.Location(id='url'),
+    sidebar,
     html.Div(id='page-content')
 ], fluid=True)
 
