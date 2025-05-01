@@ -10,7 +10,7 @@ import pandas as pd
 from app import *
 
 from components.sidebar import sidebar
-from pages import home
+from pages import home, grafico_covid
 
 app.layout = dbc.Container(children=[
     dcc.Location(id='url'),
@@ -25,6 +25,8 @@ app.layout = dbc.Container(children=[
 def render_page_content(pathname):
     if pathname == "/" or pathname == "/home":
         return home.layout
+    elif pathname == "/graph-covid":
+        return grafico_covid.layout
 
 if __name__ == '__main__':
     app.run(debug=True)
