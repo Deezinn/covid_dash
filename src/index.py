@@ -12,11 +12,14 @@ from app import *
 from components.sidebar import sidebar
 from pages import home, grafico_covid
 
-app.layout = dbc.Container(children=[
+app.layout = dbc.Container([
     dcc.Location(id='url'),
-    sidebar,
-    html.Div(id='page-content')
-], fluid=True)
+    dbc.Row([
+        dbc.Col(sidebar, sm=1),
+        dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '48px'})
+    ])
+], fluid=True, style={"background-color": "black"})
+
 
 @app.callback(
     Output("page-content", "children"),

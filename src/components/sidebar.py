@@ -13,11 +13,11 @@ from app import *
 SIDEBAR_STYLE = {
     "position": "fixed",
     "top": 0,
-    "left": 10,
+    "left": 20,
     "bottom": 0,
-    "width": "8rem",
+    "width": "10rem",
     "padding": "2rem 1rem",
-    "background-color": "#7f7f7f",
+    "background-color": "black",
 }
 
 CONTENT_STYLE = {
@@ -28,20 +28,23 @@ CONTENT_STYLE = {
 }
 
 sidebar = dbc.Container(children=[
-    html.Img(id='imagem-covid',src="assets/virus.png", disable_n_clicks=True, style={'width': '80px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto'}),
+    html.Img(id='imagem-covid',src="assets/img/virus-icone.png", disable_n_clicks=True, style={'width': '80px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-top': '20px'}),
+    html.H6('SARS-CoV-2', className='dbc', style={'text-align': 'center', 'margin-top': '20px', 'color': 'white'}),
         html.Hr(style={'border': '1px solid #ccc', 'margin': '20px 0'}),
         dbc.Nav(
             [
-                html.A(
-                    html.Img(src="assets/botao-home.png", disable_n_clicks=True, style={'width': '40px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-top': '50px'}),
-                    href="/"
-                ),
-                html.A(
-                    html.Img(src="assets/estatisticas.png", disable_n_clicks=True, style={'width': '40px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-top': '80px'}),
-                    href="/graph-covid"
-                ),html.A(
-                    #ainda nao sei oq colocar
-                ),
+            dbc.NavLink(
+                "Início",
+                href="/home",
+                active="exact",
+                className="custom-navlink"
+            ),
+            dbc.NavLink(
+                "Gráficos",
+                href="/graph-covid",
+                active="exact",
+                className="custom-navlink"
+            ),
             ],
             vertical=True,
             pills=True,
