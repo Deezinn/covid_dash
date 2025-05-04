@@ -22,10 +22,13 @@ app.layout = dbc.Container([
     Input("url", "pathname")
 )
 def render_page_content(pathname):
-    if pathname == "/" or pathname == "/home":
+    if pathname.startswith("/graph-covid"):
+        return grafico_covid.layout(pathname)
+    elif pathname == "/" or pathname == "/home":
         return home.layout
-    elif pathname == "/graph-covid":
-        return grafico_covid.layout
+    else:
+        return html.Div("404 Página não encontrada")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
