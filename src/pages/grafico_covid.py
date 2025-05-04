@@ -13,7 +13,7 @@ def layout(pathname):
     return dbc.Container(
         children=[
             dbc.Row([
-                html.Div(render_subpage(pathname), id='page-content-graph'),
+                html.Div(render_subpage(pathname), id='page-content-graph', style={'margin-top': '20px'}),
             ]),
             dbc.Row([
                 dbc.Col([

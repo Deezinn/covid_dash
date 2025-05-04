@@ -9,7 +9,7 @@ from components.sidebar import sidebar
 from pages import home, grafico_covid
 
 app.layout = dbc.Container([
-    dcc.Location(id='url'),
+    dcc.Location(id='url', refresh=False),
     dbc.Row([
         dbc.Col(sidebar, sm=1),
         dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '50px'}),
@@ -29,7 +29,6 @@ def render_page_content(pathname):
     else:
         return html.Div("404 Página não encontrada")
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 

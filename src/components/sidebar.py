@@ -28,7 +28,7 @@ CONTENT_STYLE = {
 }
 
 sidebar = dbc.Container(children=[
-    html.Img(id='imagem-covid',src="assets/img/virus-icone.png", style={'width': '80px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-top': '20px'}),
+    html.Img(id='imagem-covid', src="assets/img/virus-icone.png", style={'width': '80px', 'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-top': '20px'}),
     html.H6('SARS-CoV-2', className='dbc', style={'text-align': 'center', 'margin-top': '20px', 'color': 'white'}),
         html.Hr(style={'border': '1px solid #ccc', 'margin': '20px 0'}),
         dbc.Nav(
