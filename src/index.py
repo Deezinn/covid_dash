@@ -3,10 +3,6 @@ from dash import html, dcc, Input, Output, State
 
 import dash_bootstrap_components as dbc
 
-import plotly.express as px
-import plotly.graph_objects as go
-
-import pandas as pd
 from app import *
 
 from components.sidebar import sidebar
@@ -16,9 +12,9 @@ app.layout = dbc.Container([
     dcc.Location(id='url'),
     dbc.Row([
         dbc.Col(sidebar, sm=1),
-        dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '48px'})
+        dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '50px'}),
     ])
-], fluid=True, style={"background-color": "black"})
+], fluid=True, style={"background-color": "black", 'position': 'fixed'})
 
 
 @app.callback(
@@ -33,3 +29,4 @@ def render_page_content(pathname):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
