@@ -14,7 +14,7 @@ tab2_content = dbc.Card(
     dbc.CardBody(
         [
             html.P("This is tab 2!", className="card-text"),
-            dbc.Button("Don't click here", color="danger"),
+            dbc.Button('teste')
         ]
     ),
     className="mt-3",

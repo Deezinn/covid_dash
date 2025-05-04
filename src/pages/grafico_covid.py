@@ -8,7 +8,7 @@ from config.db import colecao
 from app import app
 
 from components import options_graph
-
+from components.graphs import deadly_covid
 def layout(pathname):
     return dbc.Container(
         children=[
@@ -27,14 +27,13 @@ def layout(pathname):
             'height': '90vh',
             'background-color': 'white',
             'padding': '0px',
-            'margin': '0',
             'border-radius': '20px'
         }
     )
 
 def render_subpage(pathname):
     if pathname == "/graph-covid" or pathname == "/graph-covid/info1":
-        return html.P("This is the content of the home page!")
+        return deadly_covid.deadly
     elif pathname == "/graph-covid/info2":
         return html.P("This is the content of page 2. Yay!", style={'background-color': 'red'})
     elif pathname == "/graph-covid/info3":

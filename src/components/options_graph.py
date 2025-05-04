@@ -21,7 +21,7 @@ sidebar = html.Div(
         'alignItems': 'center',
         'justifyContent': 'center',
         'height': '100vh',
-        'margin-top': 300,
-        'padding': '20px',
+        'margin-top': '-300px',
+        'position': 'sticky'
     }
 )

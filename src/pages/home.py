@@ -1,7 +1,7 @@
 from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 
-from components.tabs import tab1_content
+from components.tabs import tab1_content, tab2_content
 from app import app
 
 layout = dbc.Container(
@@ -48,6 +48,5 @@ def switch_tab(at):
     if at == "tab-1":
         return tab1_content
     elif at == "tab-2":
-        pass
-        # return tab2_content
-    return html.P("This shouldn't ever be displayed...")
+        return tab2_content
+

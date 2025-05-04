@@ -30,5 +30,5 @@ def render_page_content(pathname):
         return html.Div("404 Página não encontrada")
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
