@@ -25,3 +25,4 @@ sidebar = html.Div(
         'position': 'sticky'
     }
 )
+

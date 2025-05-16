@@ -14,6 +14,7 @@ app.layout = dbc.Container([
         dbc.Col(sidebar, sm=1),
         dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '50px'}),
     ])
+    
 ], fluid=True, style={"background-color": "black", 'position': 'fixed'})
 
 
