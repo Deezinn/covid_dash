@@ -34,18 +34,18 @@ layout = dbc.Container(
 
 
 @app.callback(
-   Output('graph-map', 'figure'),
-   Input('graph-map', 'id')
+    Output('graph-map', 'figure'),
+    Input('graph-map', 'id')
 )
 def update_graph_map(_):
-   fig = px.scatter_geo(
-      data,
-      locations="country",
-      locationmode='country names',
-      color="continent",
-      hover_name="country",
-      size="pop",
-      projection="natural earth",
-      title="Mapa Simulado com Dados Fictícios"
-   )
-   return fig
+    fig = px.scatter_geo(
+    data,
+    locations="country",
+    locationmode='country names',
+    color="continent",
+    hover_name="country",
+    size="pop",
+    projection="natural earth",
+    title="Mapa Simulado com Dados Fictícios"
+    )
+    return fig

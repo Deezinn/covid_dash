@@ -6,7 +6,8 @@ import dash_bootstrap_components as dbc
 from app import *
 
 from components.sidebar import sidebar
-from pages import home, grafico_covid
+from pages import home
+from pages import mapa_covid, graficos_covid
 
 app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
@@ -24,9 +25,11 @@ app.layout = dbc.Container([
 )
 def render_page_content(pathname):
     if pathname.startswith("/graph-covid"):
-        return grafico_covid.layout
+        return mapa_covid.layout
     elif pathname == "/" or pathname == "/home":
         return home.layout
+    elif pathname == "/graph-chart-covid":
+        return graficos_covid.layout
     else:
         return html.Div("404 Página não encontrada")
 
