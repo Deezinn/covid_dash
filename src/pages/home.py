@@ -15,9 +15,9 @@ layout = dbc.Container(
                                 src='assets/img/virus-header.png',
                                 style={
                                     'width': '100%',
-                                    'height': '30vh',
-                                    'border-radius': '20px 20px 0 0',
-                                    'object-fit': 'cover'
+                                    'height': '35vh',
+                                    'object-fit': 'cover',
+                                    'border-radius': '10px 10px 10px 10px'
                                 }
                             )
                         ], style={'position': 'relative'}),
@@ -38,26 +38,6 @@ layout = dbc.Container(
                         }),
                     ],style={'display': 'flex-box', 'align-items': 'center'})
                 ]),
-                dbc.Row(
-                    justify="center",
-                    children=[
-                        dbc.Col(width="auto", style={'margin-right': '400px'}, children=[
-                            html.A(children='teste1', href='')
-                        ]),
-                        dbc.Col(width="auto", style={'margin-right': '400px'}, children=[
-                            html.A(children='teste2', href='')
-                        ]),
-                        dbc.Col(width="auto", children=[
-                            html.A(children='teste3', href='')
-                        ])
-                    ],
-                    style={
-                        'padding': '10px',
-                        'background-color': 'white',
-                        'width': '100%',
-                        'margin-left': '0px'
-                    }
-                )
             ]),
         ]),
         dbc.Row([
@@ -72,30 +52,28 @@ layout = dbc.Container(
                         ])
                     ],sm=6),
                     dbc.Col([
-                        html.Img(src='assets/img/mapa.png', style={'width': '380px', 'border-radius': '10px', 'display': 'block', 'margin': 'auto', 'object-fit': 'contain'})
+                        html.Img(src='assets/img/mapa.png', style={'width': '500px', 'border-radius': '10px', 'display': 'block', 'margin-top': '50px', 'object-fit': 'contain', 'margin-left': '200px'})
                     ],sm=6)
                 ]),
                 dbc.Row([
                     dbc.Col([
-                        html.Img(src='assets/img/menino-mascara.png', style={'width': '380px', 'border-radius': '10px', 'display': 'block', 'margin': 'auto'})
+                        html.Img(src='assets/img/menino-mascara.png', style={'width': '500px', 'border-radius': '10px', 'display': 'block', 'margin': '-120px 180px'})
                     ],sm=6),
                     dbc.Col([
                         dbc.Row([
-                            html.P('Relatos de que os primeiros pacientes frequentaram esse mercado reforçaram a hipótese de transmissão animal-humano. Estudos genéticos indicam que morcegos são os prováveis hospedeiros naturais, com possibilidade de um hospedeiro intermediário, como o pangolim, ter facilitado o salto interespecífico do vírus para humanos.',style={'font-family': '"roboto", sans-serif, arial, helvetica', 'text-align': 'right', 'padding-right': '32px'})
-                        ], style={'margin-top': '40px'})
+                            html.P('Relatos de que os primeiros pacientes frequentaram esse mercado reforçaram a hipótese de transmissão animal-humano. Estudos genéticos indicam que morcegos são os prováveis hospedeiros naturais, com possibilidade de um hospedeiro intermediário, como o pangolim, ter facilitado o salto interespecífico do vírus para humanos.',style={'font-family': '"roboto", sans-serif, arial, helvetica', 'text-align': 'right', 'padding-right': '32px', 'margin-top': '50px'})
+                        ], style={'margin-top': '0'})
                     ],sm=6),
                 ], style={})
-            ],style={'padding': '20px', 'background-color': 'white', 'border-radius': '20px'})
-        ], style={'width': '98%', 'height': 'auto', 'margin-left': '18px', 'margin-top': '14px'})
+            ],style={'background-color': 'white'})
+        ], style={'width': '98%', 'height': 'auto', 'margin-left': '18px', 'margin-top': '40px'})
     ],
     fluid=True,
     style={
         'width': '100%',
         'height': '90vh',
         'padding': '0px',
-        'margin': '0',
-        'border-radius': '20px',
+        'margin-top': '12px',
         'position': 'relative',
-        'background-color': '#ECEFFF'
     }
 )

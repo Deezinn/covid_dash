@@ -12,10 +12,10 @@ app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
     dbc.Row([
         dbc.Col(sidebar, sm=1),
-        dbc.Col(html.Div(id='page-content'), sm=11, style={'padding': '50px'}),
+        dbc.Col(html.Div(id='page-content'), sm=11),
     ])
-    
-], fluid=True, style={"background-color": "black", 'position': 'fixed'})
+
+], fluid=True)
 
 
 @app.callback(

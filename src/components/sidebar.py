@@ -13,7 +13,7 @@ from app import *
 SIDEBAR_STYLE = {
     "position": "fixed",
     "top": 0,
-    "left": 20,
+    "left": 0,
     "bottom": 0,
     "width": "10rem",
     "padding": "2rem 1rem",
