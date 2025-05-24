@@ -40,8 +40,14 @@ sidebar = dbc.Container(children=[
                 className="custom-navlink"
             ),
             dbc.NavLink(
-                "Gráficos",
+                "Mapa",
                 href="/graph-covid",
+                active="exact",
+                className="custom-navlink"
+            ),
+            dbc.NavLink(
+                "Gráficos",
+                href="/graph-chart-covid",
                 active="exact",
                 className="custom-navlink"
             ),

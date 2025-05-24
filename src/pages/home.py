@@ -1,7 +1,6 @@
 from dash import html, dcc, Input, Output
 import dash_bootstrap_components as dbc
 
-from components.tabs import tab1_content, tab2_content
 from app import app
 
 layout = dbc.Container(

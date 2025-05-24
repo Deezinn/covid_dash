@@ -24,7 +24,7 @@ app.layout = dbc.Container([
 )
 def render_page_content(pathname):
     if pathname.startswith("/graph-covid"):
-        return grafico_covid.layout(pathname)
+        return grafico_covid.layout
     elif pathname == "/" or pathname == "/home":
         return home.layout
     else:
